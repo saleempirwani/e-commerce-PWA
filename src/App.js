@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Navbar, Products, Cart, Checkout } from "./components";
+import { Navbar, Products, Cart, Checkout, Footer } from "./components";
+
+import './App.css'
 
 const App = () => {
   return (
@@ -11,6 +13,7 @@ const App = () => {
         <Route exact path="/cart" component={Cart} />
         <Route exact path="/checkout" component={Checkout} />
       </Switch>
+      <Footer />
     </Router>
   );
 };

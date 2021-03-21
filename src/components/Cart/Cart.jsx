@@ -28,13 +28,13 @@ const Cart = () => {
       <>
         <Grid container spacing={3} gutterBottom>
           {cart.line_items.map((item1) => (
-            <Grid item xs={12} sm={4} key={item1.id}>
+            <Grid item xs={12} sm={3} key={item1.id}>
               <CartItem item1={item1} />
             </Grid>
           ))}
         </Grid>
         <div className={classes.cardDetails}>
-          <Typography variant="h4">Total: ${cart.total}</Typography>
+          <Typography variant="h4">Total: ${cart.total.toFixed(2)}</Typography>
           <div>
             <Button
               className={classes.emptyButton}
